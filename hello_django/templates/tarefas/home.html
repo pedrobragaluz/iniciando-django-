@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="get" action="">
+        <label for="nome">Nome:</label>
+
+        <input type="text" id="nome" name="nome" placeholder="Digte seu nome aqui">
+        <button type="submit">Enviar</button>
+    </form>
+
+    {% if nome_usuario %}
+        <h1>Bem vindo, {{nome_usuario}}!</h1>
+    {% endif %}
+
+    <a href="{% url "tarefas:adicionar" %}">Adicionar Tarefa</a>
+</body>
+</html>
+
